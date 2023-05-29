@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../Header/Header.css';
 import './SearchForm.css';
 import SearchIcon from '@mui/icons-material/Search';
@@ -10,7 +10,6 @@ import { useGlobalContext } from '../../providers/AppContext';
 const SearchForm = () => {
 
     const { setBooks, searchTerm, setSearchTerm } = useGlobalContext();
-  
 
     const handleSearch = async () => {
         try {

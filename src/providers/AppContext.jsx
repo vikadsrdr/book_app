@@ -1,6 +1,4 @@
-import React, { createContext, useState, useContext, useEffect } from 'react';
-import axios from 'axios';
-import { API_URL } from '../API';
+import React, { createContext, useState, useContext } from 'react';
 
 export const AppContext = createContext();
 
@@ -8,26 +6,17 @@ export const AppProvider = ({ children }) => {
 
     const [searchTerm, setSearchTerm] = useState('');
     const [books, setBooks] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [author, setAuthor] = useState([]);
+    const [searchAuthor, setSearchAuthor] = useState('');
 
-    // ?????????
-    
-    useEffect(() => {
-        const bookSearch = async () => {
-            try {
-                const response = await axios.get(
-                    `${API_URL}${searchTerm}`);
-                const { docs } = response.data;
-                setBooks(docs);
 
-            } catch (err) {
-                console.log(err);
-            }
-        };
-    },[searchTerm]);
-
+   const value = {
+        books, loading, setBooks, setSearchTerm, searchTerm, author, setAuthor, searchAuthor, setSearchAuthor
+    }
 
     return (
-        <AppContext.Provider value={{ books, setBooks, setSearchTerm, searchTerm }}>
+        <AppContext.Provider value={value}>
             {children}
         </AppContext.Provider>
     )

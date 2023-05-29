@@ -8,6 +8,7 @@ const Book = ({
     publisher,
     isbn,
     cover,
+    // description
 }) => {
 
     // const [active, setActive] = useState(false);
@@ -36,7 +37,8 @@ const Book = ({
                         First Published: {first_publish_year}
                     </p>
                     <p className="book__publisher-info">Publisher: {publisher}</p>
-                    <p className="book__isbn-info">ISBN: {isbn}</p>
+                    {/* <p className="book__isbn-info">ISBN: {isbn}</p>
+                    <p>{description}</p> */}
                 </div>
             </div>
         </ul>

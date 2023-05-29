@@ -1,0 +1,116 @@
+.contact {
+    min-height: calc(100vh - 500px);
+    padding: 30px;
+}
+
+.contact-wrapper {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: var(--color-border);
+    padding-bottom: 15px;
+
+}
+
+.contact-item {
+    width: 30%;
+    margin: 0 5px;
+    border: 1px solid var(--color-border);
+
+}
+
+.contact-item-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--color-accent);
+    margin-bottom: 10px;
+}
+
+.contact-item-text {
+    font-size: 20px;
+    color: var(--color-text-default);
+    text-align: center;
+}
+
+/* Contact Us Form */
+.contact-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* width: 80%; */
+}
+
+.contact-form-title {
+    text-align: center;
+}
+
+.contact-input-wrapper {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-input-wrapper input {
+    width: 30%;
+    height: 50px;
+    font-size: 21px;
+    padding: 5px 10px;
+    border: 2px solid var(--color-border);
+}
+
+.contact-textarea {
+    width: 50%;
+    border: 2px solid var(--color-border);
+    resize: none;
+    font-size: 21px;
+}
+
+.contact-btn {
+    background-color: var(--color-button);
+    color: var(--color-text-default);
+    font-weight: 500;
+    padding: 5px 10px;
+    margin-top: 15px;
+    font-size: 21px;
+}
+
+/* Media Queries */
+@media(max-width: 720px) {
+    .contact {
+        padding: 30px 15px;
+    }
+
+    .contact-input-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .contact-input-wrapper input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-item-icon {
+        font-size: 25px;
+    }
+}
+
+@media(max-width: 520px) {
+    .contact-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .contact-item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .contact-item-icon {
+        font-size: 40px;
+    }
+}

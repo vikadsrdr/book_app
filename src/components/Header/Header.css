@@ -20,8 +20,13 @@
 }
 
 .header-login {
+    display: flex;
     font-size: 27px;
     font-weight: 500;
+}
+
+.header-login h2 {
+    font-size: 25px;
 }
 
 .header-middle {
