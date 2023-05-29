@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Header.css';
 import '../Layout/layout.css';
 import logo from '../../images/logo.png';
@@ -6,23 +6,22 @@ import useTheme from '../../hooks/useTheme';
 
 import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
-import SearchIcon from '@mui/icons-material/Search';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
-
-// import { BookmarkBorderOutlinedIcon, AccountCircleOutlinedIcon, SearchIcon } from '@mui/icons-material';
+import SearchForm from '../SearchForm/SearchForm';
+import { useGlobalContext } from '../../providers/AppContext';
 
 
 const Header = () => {
 
     const { isDark, setIsDark } = useTheme();
 
+    const { books, searchTerm, setSearchTerm } = useGlobalContext();
+
     return (
         <header className={isDark ? 'darkMode' : 'lightMode'}
             style={{
                 width: '100%',
-                // height: '250px',
                 position: 'relative'
             }}>
 
@@ -38,7 +37,7 @@ const Header = () => {
                 <div className='header-icons'>
                     <BookmarkBorderOutlinedIcon style={{
                         fontSize: 28,
-                        cursor: 'pointer'
+                        cursor: 'pointer',
                     }} />
 
                     <div className='header-login'>
@@ -46,7 +45,7 @@ const Header = () => {
                             fontSize: 28,
                             cursor: 'pointer'
                         }} />
-                        Login
+                        Sign In
                     </div>
                 </div>
             </div>
@@ -57,40 +56,18 @@ const Header = () => {
                         src={logo}
                         alt="logo"
                         style={{
-                            height: '120px',
-                            marginTop: '60px ',
-                            marginLeft: '50px',
+                            width: '50%',
                         }} />
                 </div>
-                <div className='header-middle-search-bar'>
-                    <input
-                        className='header-middle-search-input'
-                        type='search'
-                        placeholder='Find your book...' />
 
-                    <SearchIcon style={{
-                        fontSize: 38,
-                        color: 'white',
-                        margin: ' 12px 6px',
-                        cursor: 'pointer'
+                <SearchForm
+                    onChange={(inputValue) => {
+                        setSearchTerm(inputValue)
                     }} />
-                </div>
-                <ShoppingCartOutlinedIcon style={{
-                    fontSize: 35,
-                    color: 'white',
-                    cursor: 'pointer'
-                }} />
             </div>
-
         </header>
     );
 };
 
 export default Header;
-
-
-
-
-
-
 

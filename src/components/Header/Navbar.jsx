@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
 
 const Navbar = () => {
+
+    const [toggleMenu, setToggleMenu] = useState(false);
+    // const handleNavbar = () => setToggleMenu(!toggleMenu);
+
     return (
         <nav className='navbar'>
             

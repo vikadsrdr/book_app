@@ -1,9 +1,12 @@
 .lightMode {
-    background-color:#aab4be;
-    color: #0b1016;
+    background-color: var(--color-background);
+    color: var(--color-text-default);
+    border: var(--color-border);
+
 }
 
 .darkMode {
-    background-color: #38444c;
-    color: #f0f2f3;
+    background-color: var(--color-background-dark);
+    color: var(--color-text-default-dark);
+    border: var(--color-border-dark);
 }
