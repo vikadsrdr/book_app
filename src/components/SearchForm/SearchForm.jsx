@@ -30,7 +30,7 @@ const SearchForm = () => {
     };
 
     return (
-        <div className='header-middle'>
+        <div className='header-middle-search-bar'>
 
             <input
                 className='header-middle-search-input'
