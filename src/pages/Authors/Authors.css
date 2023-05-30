@@ -12,11 +12,16 @@
     padding: 0 30px;
 }
 
-
 .author-item {
+     border-top: 1px solid var(--color-border);
+    background-color: var(--color-base);
+    margin: 0 auto;
+    width: 500px;
     display: flex;
     align-items: center;
-    border-top: 1px solid var(--main-color);
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px;
 }
 
 .author-search-input {

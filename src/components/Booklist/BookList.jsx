@@ -27,7 +27,7 @@ const BookList = () => {
                         publisher={
                             book.publisher ? book.publisher[0] : 'unknown'
                         }
-                        description={book.description}
+
                         isbn={book.isbn ? book.isbn[0] : 'unknown'}
 
                         cover={
@@ -37,6 +37,12 @@ const BookList = () => {
                                 '-M.jpg'
                                 : cover_not_found
                         }
+
+                        person={book.person ? book.person.slice(0,10).join(', ') : 'unknown'}
+
+                        first_sentence={book.first_sentence ? book.first_sentence[0] : ''}
+
+                        ratings_average={book.ratings_average ? book.ratings_average.toFixed(1) : 'unknown'}
                     />
 
                 ))}

@@ -66,49 +66,37 @@ const Authors = () => {
             </div>
 
 
-                {author.slice(0, 1).map((auth) => (
-                    <div className='author-item'
-                        onClick={(e) => e.stopPropagation()}>
+            {author.slice(0, 1).map((auth) => (
+                <div className='author-item'
+                    onClick={(e) => e.stopPropagation()}>
 
-                        <div className="author__info">
-                            <p className="author-name">
-                                Name: {auth.author_name}</p>
-                            <p className="author-first-published">
-                                First publish year: {auth.first_publish_year}</p>
-                        </div>
-
-                        <div className="author__image">
-                            <img
-                                src={auth.author_key
-
-                                    ? 'http://covers.openlibrary.org/a/olid/' +
-                                    auth.author_key
-                                    +
-                                    '-S.jpg' : cover_not_found}
-
-                                alt="no image available"
-                                className="author-img"
-                            />
-                        </div>
-                        <p>{auth.alternate_names}</p>
-                        <p>{auth.birth_date}</p>
-
-                        <p>{auth.top_work}</p>
-
-                        <p>{auth.bio}</p>
-
+                    <div className="author__info">
+                        <p className="author-name">
+                            Name: {auth.author_name}</p>
+                        <p className="author-first-published">
+                            First publish year: {auth.first_publish_year}</p>
                     </div>
 
-                    // text: [...],
-                    //       type: "author",
-                    //       name: "J. K. Rowling",
-                    //       alternate_names: [...],
-                    //       birth_date: "31 July 1965",
-                    //       top_work: "Harry Potter and the Philosopher's Stone",
-                    //       work_count: 162,
-                    //       top_subjects: [...]
+                    <div className="author__image">
+                        <img
+                        style={{marginTop:'25px'}}
+                            src={auth.author_key
 
-                ))}
+                                ? 'http://covers.openlibrary.org/a/olid/' +
+                                auth.author_key
+                                +
+                                '-M.jpg' : cover_not_found}
+
+                            alt="no image available"
+                            className="author-img"
+                        />
+                    </div>
+
+                </div>
+
+
+
+            ))}
         </>
     );
 };
