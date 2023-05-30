@@ -1,6 +1,22 @@
 .author-container {
     display: flex;
-    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    height: 50%;
+    margin: 10px auto;
+}
+
+.author-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+
+.author-item {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--main-color);
 }
 
 .author-search-input {
@@ -22,7 +38,6 @@
 
 .author-search-input:hover {
     background-color: rgba(242, 250, 253, 0.968);
-    /* другой цвет а то серый слишком мерзкий */
     transition-duration: 0.3s;
 }
 

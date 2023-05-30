@@ -11,8 +11,8 @@ export const AppProvider = ({ children }) => {
     const [searchAuthor, setSearchAuthor] = useState('');
 
 
-   const value = {
-        books, loading, setBooks, setSearchTerm, searchTerm, author, setAuthor, searchAuthor, setSearchAuthor
+    const value = {
+        books, loading, setLoading, setBooks, setSearchTerm, searchTerm, author, setAuthor, searchAuthor, setSearchAuthor
     }
 
     return (

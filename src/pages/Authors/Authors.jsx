@@ -38,30 +38,33 @@ const Authors = () => {
         <>
             <Navbar />
 
-            <button
-                style={{ color: 'var(--color-accent)' }}
-                onClick={() => navigate('/')}>
-                <KeyboardBackspaceOutlinedIcon />
-            </button >
+            <div className='author-wrapper'>
 
-            <div className='author-container'>
-                <input
-                    className='author-search-input'
-                    placeholder='Find your author...'
-                    type="search"
-                    value={searchAuthor}
-                    onChange={handleChange} />
                 <button
-                    onClick={authorSearch}>
-                    <SearchIcon style={{
-                        fontSize: 38,
-                        color: 'white',
-                        margin: ' 12px 6px',
-                        cursor: 'pointer',
-                    }} />
-                </button>
+                    style={{ color: 'var(--color-accent)' }}
+                    onClick={() => navigate('/')}>
+                    <KeyboardBackspaceOutlinedIcon />
+                </button >
+
+                <div className='author-container'>
+                    <input
+                        className='author-search-input'
+                        placeholder='Find your author...'
+                        type="search"
+                        value={searchAuthor}
+                        onChange={handleChange} />
+                    <button
+                        onClick={authorSearch}>
+                        <SearchIcon style={{
+                            fontSize: 38,
+                            color: 'white',
+                            margin: ' 12px 6px',
+                            cursor: 'pointer',
+                        }} />
+                    </button>
+                </div>
             </div>
-            <div className='author-subcontainer'>
+
 
                 {author.slice(0, 1).map((auth) => (
                     <div className='author-item'
@@ -94,7 +97,6 @@ const Authors = () => {
 
                         <p>{auth.bio}</p>
 
-
                     </div>
 
                     // text: [...],
@@ -107,7 +109,6 @@ const Authors = () => {
                     //       top_subjects: [...]
 
                 ))}
-            </div>
         </>
     );
 };

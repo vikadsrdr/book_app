@@ -6,7 +6,7 @@ const Book = ({
     author_name,
     first_publish_year,
     publisher,
-    isbn,
+    // isbn,
     cover,
     // description
 }) => {
@@ -44,7 +44,7 @@ const Book = ({
         </ul>
     )
 
-    {/* <Modal
+    {/* <BookItem
                 active={active}
                 setActive={setActive}
                 title={title}
@@ -54,7 +54,6 @@ const Book = ({
                 isbn={isbn}
                 cover={cover}
             /> */}
-    // </div >
 
 }
 

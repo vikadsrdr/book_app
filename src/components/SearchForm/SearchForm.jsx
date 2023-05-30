@@ -9,17 +9,21 @@ import { useGlobalContext } from '../../providers/AppContext';
 
 const SearchForm = () => {
 
-    const { setBooks, searchTerm, setSearchTerm } = useGlobalContext();
+    const { setBooks, searchTerm, setSearchTerm, setLoading } = useGlobalContext();
+
 
     const handleSearch = async () => {
+        setLoading(true);
         try {
-            const response = await axios.get(
-                `${API_URL}${searchTerm}`);
+            const response = await axios
+                .get(`${API_URL}${searchTerm}`);
             const { docs } = response.data;
             setBooks(docs);
-
+            setLoading(true)
         } catch (error) {
             console.log(error);
+            setLoading(false)
+
         }
     };
 
