@@ -8,11 +8,9 @@ const Book = ({
     first_publish_year,
     publisher,
     person,
-    // isbn,
     cover,
     first_sentence,
     ratings_average,
-    // description
 }) => {
 
     const [active, setActive] = useState(false);
@@ -29,7 +27,7 @@ const Book = ({
                     >
 
                     <div className="book__title">
-                        <p className="book__title-title">{title}</p>
+                        <h2 className="book__title-title">{title}</h2>
                         <p className="book__title-author">{author_name}</p>
                     </div>
                     <div className="book__cover">
@@ -40,13 +38,10 @@ const Book = ({
                         />
                     </div>
                     <div className="book__info">
-                        <p className="book__published-info">
-                            First Published: {first_publish_year}
-                        </p>
-                        {/* <p>{first_sentence}</p> */}
-                        {/* <p className="book__publisher-info">Publisher: {publisher}</p> */}
-                        {/* <p className="book__isbn-info">ISBN: {isbn}</p>
-                    <p>{description}</p> */}
+                        <h2 className="book__raiting-info">
+                        Raiting: {ratings_average}
+                        </h2>
+
                     </div>
                 </div>
             </div>

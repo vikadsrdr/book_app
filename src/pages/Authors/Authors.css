@@ -1,4 +1,4 @@
-.author-container {
+.author_search-input {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -6,7 +6,7 @@
     margin: 10px auto;
 }
 
-.author-wrapper {
+.author_search{
     display: flex;
     align-items: center;
     padding: 0 30px;
@@ -54,4 +54,20 @@
 
 .author-search-input::placeholder {
     user-select: none;
+}
+
+.author-container {
+    height: 100vh;
+}
+
+.author__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.author__info span {
+font-weight: bold;
+color: var(--color-accent);
 }

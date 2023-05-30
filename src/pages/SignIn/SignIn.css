@@ -8,6 +8,10 @@
     /* padding: 30px;} */
 }
 
+.signIn-wrapper {
+    height: 100vh;
+}
+
 .signIn-container>h1 {
     margin-bottom: 20px;
     font-size: 20px;

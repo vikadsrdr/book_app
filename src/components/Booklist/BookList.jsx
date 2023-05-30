@@ -10,7 +10,7 @@ import cover_not_found from '../../images/cover_not_found.jpg'
 
 const BookList = () => {
 
-    const { books, loading } = useGlobalContext();
+    const { books,loading } = useGlobalContext();
 
     // if (loading) return <Loader />;
 
@@ -38,7 +38,7 @@ const BookList = () => {
                                 : cover_not_found
                         }
 
-                        person={book.person ? book.person.slice(0,10).join(', ') : 'unknown'}
+                        person={book.person ? book.person.slice(0, 10).join(', ') : 'unknown'}
 
                         first_sentence={book.first_sentence ? book.first_sentence[0] : ''}
 

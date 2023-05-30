@@ -38,15 +38,13 @@ const Authors = () => {
         <>
             <Navbar />
 
-            <div className='author-wrapper'>
-
+            <div className='author_search'>
                 <button
                     style={{ color: 'var(--color-accent)' }}
                     onClick={() => navigate('/')}>
                     <KeyboardBackspaceOutlinedIcon />
                 </button >
-
-                <div className='author-container'>
+                <div className='author_search-input'>
                     <input
                         className='author-search-input'
                         placeholder='Find your author...'
@@ -67,34 +65,37 @@ const Authors = () => {
 
 
             {author.slice(0, 1).map((auth) => (
-                <div className='author-item'
-                    onClick={(e) => e.stopPropagation()}>
 
-                    <div className="author__info">
-                        <p className="author-name">
-                            Name: {auth.author_name}</p>
-                        <p className="author-first-published">
-                            First publish year: {auth.first_publish_year}</p>
-                    </div>
+                <div className='author-container'>
+                    <div className='author-item'
+                        onClick={(e) => e.stopPropagation()}>
 
-                    <div className="author__image">
-                        <img
-                        style={{marginTop:'25px'}}
-                            src={auth.author_key
+                        <div className="author__info">
+                            <p className="author-name">
+                                <span>{auth.author_name}</span></p>
+                            <p className="author-first-published">
+                                First publish year: {auth.first_publish_year}</p>
+                            <p>{auth.time_facet.slice(0, 1)}</p>
+                        </div>
 
-                                ? 'http://covers.openlibrary.org/a/olid/' +
-                                auth.author_key
-                                +
-                                '-M.jpg' : cover_not_found}
+                        <div className="author__image">
+                            <img
+                                style={{ marginTop: '25px' }}
+                                src={auth.author_key
 
-                            alt="no image available"
-                            className="author-img"
-                        />
+                                    ? 'http://covers.openlibrary.org/a/olid/' +
+                                    auth.author_key
+                                    +
+                                    '-M.jpg' : cover_not_found}
+
+                                alt="no image available"
+                                className="author-img"
+                            />
+                        </div>
+
                     </div>
 
                 </div>
-
-
 
             ))}
         </>

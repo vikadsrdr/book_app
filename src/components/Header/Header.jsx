@@ -38,11 +38,13 @@ const Header = () => {
                     </button>
 
                     <div className='header-icons'>
-                        <BookmarkBorderOutlinedIcon style={{
-                            fontSize: 28,
-                            cursor: 'pointer',
-                        }} />
-
+                        {/* <button
+                         onClick={() => navigate('/fav')}>
+                            <BookmarkBorderOutlinedIcon style={{
+                                fontSize: 28,
+                                cursor: 'pointer',
+                            }} />
+                        </button> */}
                         <div className='header-login'
                             onClick={handlerClickSignIn}>
                             <AccountCircleOutlinedIcon style={{
